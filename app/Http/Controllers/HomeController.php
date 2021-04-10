@@ -6,34 +6,29 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-  /**
-   * Show the application dashboard.
-   *
-   * @return \Illuminate\Contracts\Support\Renderable
-   */
+
   public function index()
   {
     return view('home');
   }
 
 
-  /**
-   * Init and join zoom for lecture.
-   *
-   * @param  \Illuminate\Http\Request $request
-   * @return \Illuminate\Http\Response
-   */
-  public function zoomMeeting()
+
+  public function zoomMeeting(Request  $request)
   {
+      $request->validate([
+         'username' => 'required',
+         'email' => 'required|email'
+      ]);
     $data = [
-      'apiKey' => 'Zn6x4KjMQ2OSl9a3TRZcLw',
-      'apiSecret' => 'jVz6Z88i17zvm1EDXlVTq9QHMnJ4ZOmnaPTF',
-      'meetingNumber' => '86866205360',
-      'userName' => 'Abdullah Sameh',
-      'passWord' => '4GNXhj',
+      'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
+      'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
+      'meetingNumber' => '93521507532',
+      'userName' => $request->input('username'),
+      'passWord' => '763151',
       'leaveUrl' => url('/'),
       'role' => 0,
-      'userEmail' => 'abdomego@gamil.com',
+      'userEmail' => $request->input('email'),
       'lang' => 'en_US',
       'signature' => '',
       'china' => false

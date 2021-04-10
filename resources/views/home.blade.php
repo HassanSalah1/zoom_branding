@@ -55,15 +55,16 @@
         <h3>Wellcome to our meeting</h3>
       </div>
       <div class="card-body">
-        <form class="form" action="" method="POST">
+        <form class="form" action="{{route('meeting')}}" method="POST">
+            @csrf
           <div1 class="form-group">
             <label for="inputName">Your Name</label>
-            <input type="text" class="form-control" id="inputName">
+            <input type="text" class="form-control" name="username" required id="inputName">
           </div1>
 
           <div class="form-group">
             <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" id="inputEmail">
+            <input type="email" class="form-control" name="email" required id="inputEmail">
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
