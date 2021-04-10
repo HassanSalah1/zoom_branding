@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Zoom Thiqa</title>
+  <title>Meeting</title>
   <meta charset="utf-8" />
   <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/bootstrap.css" />
   <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/react-select.css" />
@@ -14,7 +14,7 @@
       background-size: cover;
       background-color: #ffffff;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center right;
     }
 
     #zmmtg-root {
@@ -122,17 +122,27 @@
         margin:0 !important;
 
     }
-    .sharee-container{
-        width: 100%;
-        height: 100%;
+
+    .sharee-container,
+    .meeting-app{
+        width: 100% !important;
+        height: 100% !important;
     }
     .sharing-layout{
         height: 100% !important;
     }
-    #wc-footer{
+    /*#wc-footer{*/
+    /*    display: none;*/
+    /*}*/
+    .full-screen-icon{
         display: none;
     }
-    .full-screen-icon{
+    .send-video-container,
+    .footer__leave-btn-container,
+    .footer-button__button.ax-outline{
+        display: none;
+    }
+    .footer__inner div:not(:first-child){
         display: none;
     }
     .sharee-container__indicator{
@@ -157,7 +167,9 @@
         width: 100% !important;
         height: 100% !important;
     }
-
+    .footer{
+        background: transparent !important;
+    }
     /* .sharee-container__viewport {
          width: 100 !important;
        } */
@@ -201,7 +213,7 @@
   </style>
 </head>
 
-<body style="background-image: url({{ asset('img/bg.jpg') }})">
+<body style="background-image: url({{ asset('img/bg-1.png') }})">
   <script src="https://source.zoom.us/1.9.1/lib/vendor/react.min.js"></script>
   <script src="https://source.zoom.us/1.9.1/lib/vendor/react-dom.min.js"></script>
   <script src="https://source.zoom.us/1.9.1/lib/vendor/redux.min.js"></script>
