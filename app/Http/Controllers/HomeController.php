@@ -23,9 +23,9 @@ class HomeController extends Controller
     $data = [
       'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
       'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
-      'meetingNumber' => '93521507532',
+      'meetingNumber' => '95021334632',
       'userName' => $request->input('username'),
-      'passWord' => '763151',
+      'passWord' => '360600',
       'leaveUrl' => url('/'),
       'role' => 0,
       'userEmail' => $request->input('email'),
