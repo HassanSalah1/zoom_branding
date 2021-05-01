@@ -9,17 +9,22 @@ class HomeController extends Controller
 
   public function index()
   {
-    return view('home');
+    return view('dar-aldawa');
+  }
+
+  public function speakersForm()
+  {
+    return view('dar-aldawa-speaker');
   }
 
 
 
   public function zoomMeeting(Request  $request)
   {
-      $request->validate([
-         'username' => 'required',
-         'email' => 'required|email'
-      ]);
+    $request->validate([
+      'username' => 'required',
+      'email' => 'required|email'
+    ]);
     $data = [
       'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
       'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
