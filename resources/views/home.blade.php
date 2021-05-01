@@ -49,6 +49,9 @@
 
 <body style="background-image: url({{ asset('img/bg.jpg') }})">
 
+  {{-- <body> --}}
+  {{-- <img class="img-fluid" src="{{ asset('img/bg.png') }}" alt=""> --}}
+
   <div class="zoom-form">
     <div class="card">
       <div class="card-header">
