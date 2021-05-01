@@ -19,4 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/speaker', 'HomeController@speakersForm')->name('speaker');
+
 Route::post('/meeting', 'HomeController@zoomMeeting')->name('meeting');

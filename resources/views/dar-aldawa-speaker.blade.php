@@ -4,23 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Register</title>
+  <title>Dar Aldawa</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <style>
     body {
-      background: rgb(10, 193, 162);
-      background: linear-gradient(90deg, rgba(10, 193, 162, 1) 0%, rgba(5, 105, 85, 1) 68%);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center left;
+      background-color: #bec7d6;
+    }
+
+    .logo {
+      text-align: center;
+      padding-top: 1rem;
+    }
+
+    .logo img {
+      max-height: 280px;
     }
 
     .zoom-form {
       width: 30%;
-      margin: 15% auto;
+      margin: 3% auto;
+    }
+
+    .zoom-form .card {
+      border: none;
+    }
+
+    .zoom-form .card-header {
+      background-color: #008166;
+      border-color: #008166;
+      color: #fff;
     }
 
     .zoom-form h3 {
@@ -66,23 +81,49 @@
       overflow: hidden;
     }
 
+    @media (max-width: 1200px) {
+      .zoom-form {
+        width: 36%;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      .zoom-form {
+        width: 44%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        padding-top: 4rem;
+      }
+
+      .zoom-form {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .zoom-form {
+        margin: 10% auto;
+      }
+    }
+
   </style>
 </head>
 
-<body style="background-image: url({{ asset('img/bg-2.jpg') }})">
-  <div class="logo-top">
-    <img src="{{ asset('img/logo-1.png') }}" width="400px" alt="">
+<body>
+  <div class="logo">
+    <img class="img-fluid" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
   </div>
-  <div class="logo-bottom">
-    <img src="{{ asset('img/logo-2.png') }}" width="400px" alt="">
-  </div>
+
   <div class="zoom-form">
     <div class="card">
       <div class="card-header">
-        <h3>Wellcome to our meeting</h3>
+        <h3>Wellcome Panelist</h3>
       </div>
       <div class="card-body">
-        <form class="form" action="{{ route('meeting') }}" method="POST">
+        <form class="form" action="" method="POST">
           @csrf
           <div1 class="form-group">
             <label for="inputName">Your Name</label>
@@ -94,7 +135,7 @@
             <input type="email" class="form-control" name="email" required id="inputEmail">
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" disabled>Submit</button>
         </form>
       </div>
     </div>
