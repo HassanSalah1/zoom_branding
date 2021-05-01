@@ -36,11 +36,6 @@ class HomeController extends Controller
     return view('zoom-meeting', compact('data'));
   }
 
-  /**
-   * Show the application dashboard.
-   *
-   * @return \Illuminate\Contracts\Support\Renderable
-   */
   /* public function zoomMeeting()
   {
     return view('zoom-meeting');
