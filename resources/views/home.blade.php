@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Register</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <style>
     body {
+      background: rgb(10, 193, 162);
+      background: linear-gradient(90deg, rgba(10, 193, 162, 1) 0%, rgba(5, 105, 85, 1) 68%);
       background-size: cover;
-      background-color: #ffffff;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center left;
     }
 
     .zoom-form {
       width: 30%;
-      margin: 20% auto;
+      margin: 15% auto;
     }
 
     .zoom-form h3 {
@@ -44,29 +45,53 @@
       box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
     }
 
+    .logo-top {
+      position: absolute !important;
+      top: 60px !important;
+      left: 50% !important;
+
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+    }
+
+    .logo-bottom {
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 50% !important;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+    }
+
   </style>
 </head>
 
-<body style="background-image: url({{ asset('img/bg.jpg') }})">
-
-  {{-- <body> --}}
-  {{-- <img class="img-fluid" src="{{ asset('img/bg.png') }}" alt=""> --}}
-
+<body style="background-image: url({{ asset('img/bg-2.jpg') }})">
+  <div class="logo-top">
+    <img src="{{ asset('img/logo-1.png') }}" width="400px" alt="">
+  </div>
+  <div class="logo-bottom">
+    <img src="{{ asset('img/logo-2.png') }}" width="400px" alt="">
+  </div>
   <div class="zoom-form">
     <div class="card">
       <div class="card-header">
         <h3>Wellcome to our meeting</h3>
       </div>
       <div class="card-body">
-        <form class="form" action="" method="POST">
+        <form class="form" action="{{ route('meeting') }}" method="POST">
+          @csrf
           <div1 class="form-group">
             <label for="inputName">Your Name</label>
-            <input type="text" class="form-control" id="inputName">
+            <input type="text" class="form-control" name="username" required id="inputName">
           </div1>
 
           <div class="form-group">
             <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" id="inputEmail">
+            <input type="email" class="form-control" name="email" required id="inputEmail">
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>

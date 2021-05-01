@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/meeting', 'HomeController@zoomMeeting')->name('meeting');
+Route::post('/meeting', 'HomeController@zoomMeeting')->name('meeting');
