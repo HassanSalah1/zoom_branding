@@ -8,6 +8,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
   <style>
     body {
@@ -21,6 +23,10 @@
 
     .logo img {
       max-height: 280px;
+    }
+
+    .timer .head {
+      text-align: center
     }
 
     .zoom-form {
@@ -117,7 +123,122 @@
     <img class="img-fluid" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
   </div>
 
-  <div class="zoom-form">
+
+  <div class="timer">
+    <div class="head">
+      <h3>Welcome to our webinar</h3>
+      <p>It will be available in</p>
+    </div>
+
+    <div class="countdown">
+      <!-- DIAS -->
+      <div class="bloc-time days" data-init-value="7">
+        <span class="count-title">Days</span>
+
+        <div class="figure days days-1">
+          <span class="top">9</span>
+          <span class="top-back">
+            <span>9</span>
+          </span>
+          <span class="bottom">9</span>
+          <span class="bottom-back">
+            <span>9</span>
+          </span>
+        </div>
+
+        <div class="figure days days-2">
+          <span class="top">9</span>
+          <span class="top-back">
+            <span>9</span>
+          </span>
+          <span class="bottom">9</span>
+          <span class="bottom-back">
+            <span>9</span>
+          </span>
+        </div>
+      </div>
+      <!-- HORAS -->
+      <div class="bloc-time hours" data-init-value="24">
+        <span class="count-title">Hours</span>
+
+        <div class="figure hours hours-1">
+          <span class="top">2</span>
+          <span class="top-back">
+            <span>2</span>
+          </span>
+          <span class="bottom">2</span>
+          <span class="bottom-back">
+            <span>2</span>
+          </span>
+        </div>
+
+        <div class="figure hours hours-2">
+          <span class="top">4</span>
+          <span class="top-back">
+            <span>4</span>
+          </span>
+          <span class="bottom">4</span>
+          <span class="bottom-back">
+            <span>4</span>
+          </span>
+        </div>
+      </div>
+      <!-- MINUTOS -->
+      <div class="bloc-time min" data-init-value="0">
+        <span class="count-title">Minutes</span>
+
+        <div class="figure min min-1">
+          <span class="top">5</span>
+          <span class="top-back">
+            <span>5</span>
+          </span>
+          <span class="bottom">5</span>
+          <span class="bottom-back">
+            <span>5</span>
+          </span>
+        </div>
+
+        <div class="figure min min-2">
+          <span class="top">9</span>
+          <span class="top-back">
+            <span>9</span>
+          </span>
+          <span class="bottom">9</span>
+          <span class="bottom-back">
+            <span>9</span>
+          </span>
+        </div>
+      </div>
+      <!-- SEGUNDOS -->
+      <div class="bloc-time sec" data-init-value="0">
+        <span class="count-title">Seconds</span>
+
+        <div class="figure sec sec-1">
+          <span class="top">5</span>
+          <span class="top-back">
+            <span>5</span>
+          </span>
+          <span class="bottom">5</span>
+          <span class="bottom-back">
+            <span>5</span>
+          </span>
+        </div>
+
+        <div class="figure sec sec-2">
+          <span class="top">9</span>
+          <span class="top-back">
+            <span>9</span>
+          </span>
+          <span class="bottom">9</span>
+          <span class="bottom-back">
+            <span>9</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{-- <div class="zoom-form">
     <div class="card">
       <div class="card-header">
         <h3>Wellcome to our meeting</h3>
@@ -139,12 +260,19 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
   </script>
+
+  <!-- JAVASCRIPT (if you have an error "tweenmax is not defined") -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>
