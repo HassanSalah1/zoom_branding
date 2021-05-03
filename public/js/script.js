@@ -8,7 +8,7 @@
     countdown_interval: null,
     total_seconds: 0,
 
-    // Initialize the countdown  
+    // Initialize the countdown
     init: function() {
       var Today           = new Date();
       var Todayday        = Today.getDate(); // getDay() is an integer corresponding to the day of the week: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
@@ -16,7 +16,7 @@
       var Todayminutes    = Today.getMinutes();
       var Todayseconds    = Today.getSeconds();
 
-      var DeadLine        = new Date('July 11, 2016 23:59');
+      var DeadLine        = new Date('May 21, 2021 17:00');
       var DeadLineday     = DeadLine.getDate();
       var DeadLinehours   = DeadLine.getUTCHours(); // I'm not sure why getHours() here is "loaded jangá"
       var DeadLineminutes = DeadLine.getMinutes();
@@ -42,7 +42,7 @@
       // this.total_seconds = ((this.values.days * 24) + (this.values.hours * 60 * 60 + (this.values.minutes * 60))) + this.values.seconds;
       this.total_seconds = this.values.seconds + (this.values.minutes * 60) + (this.values.hours * 60 * 60) + (this.values.days * 24 * 60 * 60);
 
-      // Animate countdown to the end 
+      // Animate countdown to the end
       this.count();
     },
 
