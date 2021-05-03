@@ -49,7 +49,7 @@ h3 strong {
 }
 
 .countdown {
-    width: 560px;
+    /* width: 560px; */
     margin: 0 auto;
 }
 .countdown .bloc-time {
