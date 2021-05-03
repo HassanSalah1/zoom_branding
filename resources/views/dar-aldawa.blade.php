@@ -37,6 +37,10 @@
       color: #fff;
     }
 
+    .timer .card-header h2 {
+      font-size: 1.5rem;
+    }
+
     .zoom-form {
       width: 30%;
       margin: 3% auto;
@@ -126,14 +130,14 @@
   </style>
 </head>
 
-<body>
+<body style="overflow: hidden;">
   <div class="logo">
     <img class="img-fluid" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
   </div>
 
 
   <div class="timer row justify-content-center">
-    <div class="col-sm-12 col-md-3"></div>
+    {{-- <div class="col-sm-12 col-md-3"></div> --}}
     <div class="col-sm-12 col-md-6">
       <div class="card">
         <div class="card-header">
@@ -260,7 +264,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-3"></div>
+    {{-- <div class="col-sm-12 col-md-3"></div> --}}
   </div>
 
 
