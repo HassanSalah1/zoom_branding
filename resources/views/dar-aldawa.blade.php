@@ -154,13 +154,13 @@
 
   <div class="timer row justify-content-center">
     {{-- <div class="col-sm-12 col-md-3"></div> --}}
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-9 col-lg-7">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header py-3">
           <h2>Welcome to our webinar</h2>
           <p>It will be available in</p>
         </div>
-        <div class="card-body">
+        <div class="card-body py-5">
           <div class="countdown">
             <div class="row">
               <div class="col-6 col-md-3 d-flex justify-content-center">
