@@ -41,6 +41,18 @@
       font-size: 1.5rem;
     }
 
+    .timer .card .card-body {
+      background-color: #eee;
+    }
+
+    .countdown .bloc-time {
+      margin-bottom: 1rem;
+    }
+
+    .countdown .count-title {
+      margin-bottom: 10px;
+    }
+
     .zoom-form {
       width: 30%;
       margin: 3% auto;
@@ -112,6 +124,10 @@
     }
 
     @media (max-width: 768px) {
+      .timer .card {
+        margin: 2rem 1.125rem 0;
+      }
+
       .logo {
         padding-top: 4rem;
       }
