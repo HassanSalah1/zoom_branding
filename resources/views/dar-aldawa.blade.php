@@ -25,8 +25,16 @@
       max-height: 280px;
     }
 
-    .timer .head {
-      text-align: center
+    .timer .card {
+      border: none;
+      margin-top: 2rem;
+    }
+
+    .timer .card-header {
+      background-color: #008166;
+      border-color: #008166;
+      text-align: center;
+      color: #fff;
     }
 
     .zoom-form {
@@ -124,129 +132,137 @@
   </div>
 
 
-  <div class="timer">
-    <div class="head">
-      <h3>Welcome to our webinar</h3>
-      <p>It will be available in</p>
-    </div>
-
-    <div class="countdown">
-      <div class="row">
-        <div class="col-6 col-md-3">
-          <!-- DIAS -->
-          <div class="bloc-time days" data-init-value="7">
-            <span class="count-title">Days</span>
-
-            <div class="figure days days-1">
-              <span class="top">9</span>
-              <span class="top-back">
-                <span>9</span>
-              </span>
-              <span class="bottom">9</span>
-              <span class="bottom-back">
-                <span>9</span>
-              </span>
-            </div>
-
-            <div class="figure days days-2">
-              <span class="top">9</span>
-              <span class="top-back">
-                <span>9</span>
-              </span>
-              <span class="bottom">9</span>
-              <span class="bottom-back">
-                <span>9</span>
-              </span>
-            </div>
-          </div>
+  <div class="timer row justify-content-center">
+    <div class="col-sm-12 col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h2>Welcome to our webinar</h2>
+          <p>It will be available in</p>
         </div>
-        <div class="col-6 col-md-3">
-          <!-- HORAS -->
-          <div class="bloc-time hours" data-init-value="24">
-            <span class="count-title">Hours</span>
+        <div class="card-body">
+          <div class="countdown">
+            <div class="row">
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <!-- DIAS -->
+                <div class="bloc-time days" data-init-value="7">
+                  <span class="count-title">Days</span>
 
-            <div class="figure hours hours-1">
-              <span class="top">2</span>
-              <span class="top-back">
-                <span>2</span>
-              </span>
-              <span class="bottom">2</span>
-              <span class="bottom-back">
-                <span>2</span>
-              </span>
-            </div>
+                  <div class="figure days days-1">
+                    <span class="top">9</span>
+                    <span class="top-back">
+                      <span>9</span>
+                    </span>
+                    <span class="bottom">9</span>
+                    <span class="bottom-back">
+                      <span>9</span>
+                    </span>
+                  </div>
 
-            <div class="figure hours hours-2">
-              <span class="top">4</span>
-              <span class="top-back">
-                <span>4</span>
-              </span>
-              <span class="bottom">4</span>
-              <span class="bottom-back">
-                <span>4</span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <!-- MINUTOS -->
-          <div class="bloc-time min" data-init-value="0">
-            <span class="count-title">Minutes</span>
+                  <div class="figure days days-2">
+                    <span class="top">9</span>
+                    <span class="top-back">
+                      <span>9</span>
+                    </span>
+                    <span class="bottom">9</span>
+                    <span class="bottom-back">
+                      <span>9</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <!-- HORAS -->
+                <div class="bloc-time hours" data-init-value="24">
+                  <span class="count-title">Hours</span>
 
-            <div class="figure min min-1">
-              <span class="top">5</span>
-              <span class="top-back">
-                <span>5</span>
-              </span>
-              <span class="bottom">5</span>
-              <span class="bottom-back">
-                <span>5</span>
-              </span>
-            </div>
+                  <div class="figure hours hours-1">
+                    <span class="top">2</span>
+                    <span class="top-back">
+                      <span>2</span>
+                    </span>
+                    <span class="bottom">2</span>
+                    <span class="bottom-back">
+                      <span>2</span>
+                    </span>
+                  </div>
 
-            <div class="figure min min-2">
-              <span class="top">9</span>
-              <span class="top-back">
-                <span>9</span>
-              </span>
-              <span class="bottom">9</span>
-              <span class="bottom-back">
-                <span>9</span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <!-- SEGUNDOS -->
-          <div class="bloc-time sec" data-init-value="0">
-            <span class="count-title">Seconds</span>
+                  <div class="figure hours hours-2">
+                    <span class="top">4</span>
+                    <span class="top-back">
+                      <span>4</span>
+                    </span>
+                    <span class="bottom">4</span>
+                    <span class="bottom-back">
+                      <span>4</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <!-- MINUTOS -->
+                <div class="bloc-time min" data-init-value="0">
+                  <span class="count-title">Minutes</span>
 
-            <div class="figure sec sec-1">
-              <span class="top">5</span>
-              <span class="top-back">
-                <span>5</span>
-              </span>
-              <span class="bottom">5</span>
-              <span class="bottom-back">
-                <span>5</span>
-              </span>
-            </div>
+                  <div class="figure min min-1">
+                    <span class="top">5</span>
+                    <span class="top-back">
+                      <span>5</span>
+                    </span>
+                    <span class="bottom">5</span>
+                    <span class="bottom-back">
+                      <span>5</span>
+                    </span>
+                  </div>
 
-            <div class="figure sec sec-2">
-              <span class="top">9</span>
-              <span class="top-back">
-                <span>9</span>
-              </span>
-              <span class="bottom">9</span>
-              <span class="bottom-back">
-                <span>9</span>
-              </span>
+                  <div class="figure min min-2">
+                    <span class="top">9</span>
+                    <span class="top-back">
+                      <span>9</span>
+                    </span>
+                    <span class="bottom">9</span>
+                    <span class="bottom-back">
+                      <span>9</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <!-- SEGUNDOS -->
+                <div class="bloc-time sec" data-init-value="0">
+                  <span class="count-title">Seconds</span>
+
+                  <div class="figure sec sec-1">
+                    <span class="top">5</span>
+                    <span class="top-back">
+                      <span>5</span>
+                    </span>
+                    <span class="bottom">5</span>
+                    <span class="bottom-back">
+                      <span>5</span>
+                    </span>
+                  </div>
+
+                  <div class="figure sec sec-2">
+                    <span class="top">9</span>
+                    <span class="top-back">
+                      <span>9</span>
+                    </span>
+                    <span class="bottom">9</span>
+                    <span class="bottom-back">
+                      <span>9</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="col-sm-12 col-md-3"></div>
   </div>
+
 
   {{-- <div class="zoom-form">
     <div class="card">
