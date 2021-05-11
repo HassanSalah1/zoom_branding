@@ -142,19 +142,44 @@
                 margin: 10% auto;
             }
         }
-
+        .body{
+            height: 100vh;
+            position: relative;
+            background-image: url("/img/dar-bg.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .dar-logo{
+            position: fixed;
+            right: 50px;
+            top: 20px;
+            width: 150px;
+        }
+        .pelco-logo{
+            position: fixed;
+            right: 50px;
+            bottom: 40px;
+        }
+        .word-logo{
+            position: fixed;
+            left: 20px;
+            bottom: 100px;
+        }
     </style>
 </head>
 
-<body style="overflow: hidden;">
+<body style="overflow: hidden;" class="body">
 <div class="logo">
-    <img class="img-fluid" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
+    <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
+    <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
+    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
 </div>
 
 
-<div class="timer row justify-content-center">
+<div class="timer row justify-content-center pt-5 mt-5">
     {{-- <div class="col-sm-12 col-md-3"></div> --}}
-    <div class="col-sm-12 col-md-9 col-lg-7">
+    <div class="col-sm-12 col-md-9 col-lg-7 pt-5 mt-5">
         <div class="card">
             <div class="card-header py-3">
                 <h2>Welcome Panelist to our webinar</h2>
