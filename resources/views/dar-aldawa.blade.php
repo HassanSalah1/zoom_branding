@@ -165,7 +165,7 @@
             <div class="row">
               <div class="col-6 col-md-3 d-flex justify-content-center">
                 <!-- DIAS -->
-                <div class="bloc-time days" data-init-value="7">
+                <div class="bloc-time days" data-init-value="18">
                   <span class="count-title">Days</span>
 
                   <div class="figure days days-1">
