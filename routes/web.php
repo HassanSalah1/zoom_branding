@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/waiting-page', 'HomeController@waitingPage')->name('attendees.waiting');
 
 Route::get('/speaker', 'HomeController@speakersForm')->name('speaker');
+Route::get('waiting-page/speaker', 'HomeController@waitingPageSpeaker')->name('speaker.waiting');
 
 Route::post('/meeting', 'HomeController@zoomMeeting')->name('meeting');

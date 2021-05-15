@@ -142,23 +142,47 @@
         margin: 10% auto;
       }
     }
-
+    .body{
+        height: 100vh;
+        position: relative;
+        background-image: url("/img/dar-bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .dar-logo{
+        position: fixed;
+        right: 50px;
+        top: 20px;
+        width: 150px;
+    }
+    .pelco-logo{
+        position: fixed;
+        right: 50px;
+        bottom: 40px;
+    }
+    .word-logo{
+        position: fixed;
+        left: 20px;
+        bottom: 100px;
+    }
   </style>
 </head>
 
-<body style="overflow: hidden;">
-  <div class="logo">
-    <img class="img-fluid" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
-  </div>
+<body style="overflow: hidden;" class="body">
+<div class="logo">
+    <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
+    <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
+    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
+</div>
 
-
-  <div class="timer row justify-content-center">
+  <div class="timer row justify-content-center pt-5 mt-5">
     {{-- <div class="col-sm-12 col-md-3"></div> --}}
-    <div class="col-sm-12 col-md-9 col-lg-7">
+    <div class="col-sm-12 col-md-9 col-lg-7 pt-5 mt-5">
       <div class="card">
         <div class="card-header py-3">
           <h2>Welcome to our webinar</h2>
-          <p>It will be available in</p>
+          <p>The webinar will be available in</p>
         </div>
         <div class="card-body py-5">
           <div class="countdown">
@@ -169,24 +193,24 @@
                   <span class="count-title">Days</span>
 
                   <div class="figure days days-1">
-                    <span class="top">9</span>
+                    <span class="top">0</span>
                     <span class="top-back">
                       <span>9</span>
                     </span>
-                    <span class="bottom">9</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
                   </div>
 
                   <div class="figure days days-2">
-                    <span class="top">9</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">9</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
                   </div>
                 </div>
@@ -197,24 +221,24 @@
                   <span class="count-title">Hours</span>
 
                   <div class="figure hours hours-1">
-                    <span class="top">2</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>2</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">2</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>2</span>
+                      <span>0</span>
                     </span>
                   </div>
 
                   <div class="figure hours hours-2">
-                    <span class="top">4</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>4</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">4</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>4</span>
+                      <span>0</span>
                     </span>
                   </div>
                 </div>
@@ -225,24 +249,24 @@
                   <span class="count-title">Minutes</span>
 
                   <div class="figure min min-1">
-                    <span class="top">5</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>5</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">5</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>5</span>
+                      <span>0</span>
                     </span>
                   </div>
 
                   <div class="figure min min-2">
-                    <span class="top">9</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">9</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
                   </div>
                 </div>
@@ -253,24 +277,24 @@
                   <span class="count-title">Seconds</span>
 
                   <div class="figure sec sec-1">
-                    <span class="top">5</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>5</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">5</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>5</span>
+                      <span>0</span>
                     </span>
                   </div>
 
                   <div class="figure sec sec-2">
-                    <span class="top">9</span>
+                    <span class="top">0</span>
                     <span class="top-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
-                    <span class="bottom">9</span>
+                    <span class="bottom">0</span>
                     <span class="bottom-back">
-                      <span>9</span>
+                      <span>0</span>
                     </span>
                   </div>
                 </div>
@@ -284,29 +308,6 @@
   </div>
 
 
-  {{-- <div class="zoom-form">
-    <div class="card">
-      <div class="card-header">
-        <h3>Wellcome to our meeting</h3>
-      </div>
-      <div class="card-body">
-        <form class="form" action="" method="POST">
-          @csrf
-          <div1 class="form-group">
-            <label for="inputName">Your Name</label>
-            <input type="text" class="form-control" name="username" required id="inputName">
-          </div1>
-
-          <div class="form-group">
-            <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" name="email" required id="inputEmail">
-          </div>
-
-          <button type="submit" class="btn btn-primary" disabled>Submit</button>
-        </form>
-      </div>
-    </div>
-  </div> --}}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"

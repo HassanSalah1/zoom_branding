@@ -8,6 +8,7 @@ var Countdown = {
     total_seconds: 0,
 
     // Initialize the countdown
+<<<<<<< HEAD
     init: function () {
         var Today = new Date();
         var Todayday = Today.getDate(); // getDay() is an integer corresponding to the day of the week: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
@@ -47,6 +48,43 @@ var Countdown = {
 
         // Animate countdown to the end
         this.count();
+=======
+    init: function() {
+      var Today           = new Date();
+      var Todayday        = Today.getDate(); // getDay() is an integer corresponding to the day of the week: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
+      var Todayhours      = Today.getHours();
+      var Todayminutes    = Today.getMinutes();
+      var Todayseconds    = Today.getSeconds();
+
+      var DeadLine        = new Date('May 21, 2021 17:00');
+      var DeadLineday     = DeadLine.getDate();
+      var DeadLinehours   = DeadLine.getUTCHours(); // I'm not sure why getHours() here is "loaded jangá"
+      var DeadLineminutes = DeadLine.getMinutes();
+      var DeadLineseconds = DeadLine.getSeconds();
+
+      // DOM
+      this.$ = {
+        days:     this.$el.find('.bloc-time.days .figure'),
+        hours:    this.$el.find('.bloc-time.hours .figure'),
+        minutes:  this.$el.find('.bloc-time.min .figure'),
+        seconds:  this.$el.find('.bloc-time.sec .figure')
+      };
+
+      // Init countdown values
+      this.values = {
+        days:     DeadLineday - Todayday,
+        hours:    DeadLinehours - Todayhours,
+        minutes:  DeadLineminutes - Todayminutes,
+        seconds:  DeadLineseconds - Todayseconds
+      };
+
+      // Initialize total seconds
+      // this.total_seconds = ((this.values.days * 24) + (this.values.hours * 60 * 60 + (this.values.minutes * 60))) + this.values.seconds;
+      this.total_seconds = this.values.seconds + (this.values.minutes * 60) + (this.values.hours * 60 * 60) + (this.values.days * 24 * 60 * 60);
+
+      // Animate countdown to the end
+      this.count();
+>>>>>>> 4b42020f0ff90c832e445855732b528aef0c207d
     },
 
     count: function () {
@@ -153,6 +191,32 @@ var Countdown = {
             if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
         }
     },
+<<<<<<< HEAD
 };
 // Let's go !
 Countdown.init();
+=======
+
+    checkDay: function(value, $el_1, $el_2) {
+
+      var val_1 = value.toString().charAt(0),
+        val_2 = value.toString().charAt(1),
+        fig_1_value = $el_1.find('.top').html(),
+        fig_2_value = $el_2.find('.top').html();
+
+      if (value >= 10) {
+
+        // Animate only if the figure has changed
+        if (fig_1_value !== val_1) this.animateFigure($el_1, val_1);
+        if (fig_2_value !== val_2) this.animateFigure($el_2, val_2);
+      } else {
+
+        // If we are under 10, replace first figure with 0
+        if (fig_1_value !== '0') this.animateFigure($el_1, 0);
+        if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
+      }
+    }
+  };
+  // Let's go !
+  Countdown.init();
+>>>>>>> 4b42020f0ff90c832e445855732b528aef0c207d

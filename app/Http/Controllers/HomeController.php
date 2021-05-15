@@ -9,14 +9,22 @@ class HomeController extends Controller
 
   public function index()
   {
-    return view('dar-aldawa');
+    return view('dar-aldawa.index');
   }
 
+    public function waitingPage()
+    {
+        return view('dar-aldawa.timer');
+    }
   public function speakersForm()
   {
-    return view('dar-aldawa-speaker');
+    return view('dar-aldawa.index-speaker');
   }
 
+    public function waitingPageSpeaker()
+    {
+        return view('dar-aldawa.timer-speaker');
+    }
 
 
   public function zoomMeeting(Request  $request)
@@ -41,11 +49,6 @@ class HomeController extends Controller
     return view('zoom-meeting', compact('data'));
   }
 
-  /**
-   * Show the application dashboard.
-   *
-   * @return \Illuminate\Contracts\Support\Renderable
-   */
   /* public function zoomMeeting()
   {
     return view('zoom-meeting');
