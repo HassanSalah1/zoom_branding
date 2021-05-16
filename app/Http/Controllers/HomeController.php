@@ -12,19 +12,19 @@ class HomeController extends Controller
     return view('dar-aldawa.index');
   }
 
-    public function waitingPage()
-    {
-        return view('dar-aldawa.timer');
-    }
+  public function waitingPage()
+  {
+    return view('dar-aldawa.timer');
+  }
   public function speakersForm()
   {
     return view('dar-aldawa.index-speaker');
   }
 
-    public function waitingPageSpeaker()
-    {
-        return view('dar-aldawa.timer-speaker');
-    }
+  public function waitingPageSpeaker()
+  {
+    return view('dar-aldawa.timer-speaker');
+  }
 
 
   public function zoomMeeting(Request  $request)
@@ -36,9 +36,9 @@ class HomeController extends Controller
     $data = [
       'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
       'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
-      'meetingNumber' => '95021334632',
+      'meetingNumber' => '98969037681',
       'userName' => $request->input('username'),
-      'passWord' => '360600',
+      'passWord' => '447939',
       'leaveUrl' => url('/'),
       'role' => 0,
       'userEmail' => $request->input('email'),
@@ -46,7 +46,7 @@ class HomeController extends Controller
       'signature' => '',
       'china' => false
     ];
-    return view('zoom-meeting', compact('data'));
+    return view('dar-aldawa.zoom-webinar', compact('data'));
   }
 
   /* public function zoomMeeting()
