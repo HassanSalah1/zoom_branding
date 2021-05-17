@@ -167,7 +167,18 @@
         .word-logo{
             position: fixed;
             left: 20px;
-            bottom: 100px;
+            top: 100px;
+        }
+        .zoom-form{
+                position: fixed;
+            left: 10%;
+            bottom: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            .zoom-form{
+                position: unset;
+
+            }
         }
     </style>
 </head>
@@ -176,10 +187,10 @@
 <div class="logo">
     <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
     <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
-    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
+{{--    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">--}}
 </div>
 <div class="row justify-content-center pt-5 mt-5 px-3" >
-    <div class="col-md-6 pt-5 mt-5 zoom-form" >
+    <div class="col-md-5 pt-5 mt-5 zoom-form" >
         <div class="card">
             <div class="card-header py-3">
                 <h2 class="mb-0">Welcome to our webinar</h2>

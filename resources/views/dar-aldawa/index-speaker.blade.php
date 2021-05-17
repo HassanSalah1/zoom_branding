@@ -169,6 +169,17 @@
             left: 20px;
             bottom: 100px;
         }
+        .zoom-form{
+            position: fixed;
+            left: 10%;
+            bottom: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            .zoom-form{
+                position: unset;
+
+            }
+        }
     </style>
 </head>
 
@@ -176,7 +187,7 @@
 <div class="logo">
     <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
     <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
-    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
+{{--    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">--}}
 </div>
 <div class="row justify-content-center px-3 pt-5 mt-5" >
     <div class="col-md-6 zoom-form pt-5 mt-5" >
