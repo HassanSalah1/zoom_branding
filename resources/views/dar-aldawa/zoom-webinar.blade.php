@@ -10,14 +10,75 @@
   <meta http-equiv="origin-trial" content="">
 
   <style>
+      .body{
+          height: 100vh;
+          position: relative;
+          background-image: url("/img/dar-bg.jpg");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+      }
+      .dar-logo{
+          position: fixed;
+          right: 45%;
+          top: 2px;
+          width: 150px;
+          z-index: 1;
+      }
+      .pelco-logo{
+          position: fixed;
+          right: 50px;
+          bottom: 0px;
+          z-index: 1;
+      }
+      .word-logo{
+          position: fixed;
+          left: 20px;
+          bottom: 0px;
+          z-index: 1;
+      }
+      @media only screen and (max-width: 600px) {
+          .dar-logo{
+              right: 38%;
+          }
+          .word-logo{
+              display: none;
+          }
+      }
+      #zmmtg-root{
+          background: transparent !important;
+      }
+      .meeting-app, .webinar-client-inner,#wc-loading{
+          width: 85% !important;
+          height: 85% !important;
+          margin: auto;
+          margin-top: 5% !important;
+      }
+
+      .webinar-client-inner{
+          width: 85% !important;
+          height: 85% !important;
+          margin: auto;
+
+      }
+      .join-dialog{
+          width: 84% !important;
+          left: 8% !important;
+          bottom: 15% !important;
+      }
+
   </style>
 </head>
 
-<body>
+<body style="overflow: hidden;" class="body">
 
+<div class="logo">
+    <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
+    <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
+    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
+</div>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script src="https://source.zoom.us/1.9.1/lib/vendor/react.min.js"></script>
   <script src="https://source.zoom.us/1.9.1/lib/vendor/react-dom.min.js"></script>
   <script src="https://source.zoom.us/1.9.1/lib/vendor/redux.min.js"></script>

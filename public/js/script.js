@@ -149,32 +149,7 @@ var Countdown = {
             if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
         }
     },
-<<<<<<< HEAD
+
 };
 // Let's go !
 Countdown.init();
-=======
-
-    checkDay: function(value, $el_1, $el_2) {
-
-      var val_1 = value.toString().charAt(0),
-        val_2 = value.toString().charAt(1),
-        fig_1_value = $el_1.find('.top').html(),
-        fig_2_value = $el_2.find('.top').html();
-
-      if (value >= 10) {
-
-        // Animate only if the figure has changed
-        if (fig_1_value !== val_1) this.animateFigure($el_1, val_1);
-        if (fig_2_value !== val_2) this.animateFigure($el_2, val_2);
-      } else {
-
-        // If we are under 10, replace first figure with 0
-        if (fig_1_value !== '0') this.animateFigure($el_1, 0);
-        if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
-      }
-    }
-  };
-  // Let's go !
-  Countdown.init();
->>>>>>> 4b42020f0ff90c832e445855732b528aef0c207d
