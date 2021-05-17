@@ -52,9 +52,11 @@
           width: 85% !important;
           height: 85% !important;
           margin: auto;
-          margin-top: 5% !important;
+          margin-top: 60px !important;
       }
-
+      #wc-loading{
+          top: 80px;
+      }
       .webinar-client-inner{
           width: 85% !important;
           height: 85% !important;
