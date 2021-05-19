@@ -33,7 +33,7 @@
         right: 50px;
         bottom: 0px;
         z-index: 1;
-        width: 210px;
+        width: 185px;
       }
 
       .word-logo {
