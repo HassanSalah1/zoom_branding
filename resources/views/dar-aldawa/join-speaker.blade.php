@@ -172,9 +172,9 @@
     }
 
     .word-logo {
-        position: fixed;
+      position: fixed;
         right: 20px;
-        top: 100px;
+      top: 100px;
     }
 
     .zoom-form {
@@ -215,11 +215,11 @@
           <h2 class="mb-0">Welcome Panelist to our webinar</h2>
         </div>
         <div class="card-body">
-{{--          <h2 class="mb-0 speaker-join">You are invited to a Zoom webinar</h2>--}}
+          <h2 class="mb-0 speaker-join">You are invited to a Zoom webinar</h2>
 
-{{--          <a href="https://pomyst.zoom.us/w/98969037681?tk=pkSYIYf1kt9z3qqKnAeFtWXCgFDDLLR1EibQVOs9jwA.DQIAAAAXCwOrcRZSNnZyOE83NlNQNk41djJncjFhalh3AAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=UVg2UFQ2YlQrZ2cvY24wb29uK3BnZz09"--}}
-{{--            class="btn btn-primary join">Click Here to Join</a>--}}
-            <form class="form" action="{{ route('speaker.waiting') }}" method="get">
+          <a href="https://pomyst.zoom.us/w/98969037681?tk=pkSYIYf1kt9z3qqKnAeFtWXCgFDDLLR1EibQVOs9jwA.DQIAAAAXCwOrcRZSNnZyOE83NlNQNk41djJncjFhalh3AAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=UVg2UFQ2YlQrZ2cvY24wb29uK3BnZz09"
+            class="btn btn-primary join">Click Here to Join</a>
+          {{-- <form class="form" action="{{ route('speaker.waiting') }}" method="get">
 
                     <div1 class="form-group">
                         <label for="inputName">Your Name</label>
@@ -232,7 +232,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </form> --}}
         </div>
       </div>
     </div>

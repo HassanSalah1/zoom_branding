@@ -163,8 +163,8 @@
         }
         .word-logo{
             position: fixed;
-            left: 20px;
-            bottom: 100px;
+            right: 20px;
+            top: 100px;
         }
         .zoom-bottom{
             position: fixed;
@@ -184,7 +184,7 @@
 <div class="logo">
     <img class="dar-logo" src="{{ asset('img/dar-aldawa.png') }}" alt="dar-aldawa">
     <img class="pelco-logo" src="{{ asset('img/pelco.png') }}" alt="dar-aldawa">
-{{--    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">--}}
+    <img class="word-logo" src="{{ asset('img/word.png') }}" alt="dar-aldawa">
 </div>
 
 
