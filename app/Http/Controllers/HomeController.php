@@ -23,9 +23,9 @@ class HomeController extends Controller
 
   public function waitingPageSpeaker(Request  $request)
   {
-      if($request->input('email') !== 'speaker@admin.com'){
-          return view('dar-aldawa.timer-speaker');
-      }
+    if ($request->input('email') !== 'speaker@admin.com') {
+      return view('dar-aldawa.timer-speaker');
+    }
     return view('dar-aldawa.join-speaker');
   }
 
@@ -37,9 +37,9 @@ class HomeController extends Controller
       'username' => 'required',
       'email' => 'required|email'
     ]);
-      if($request->input('email') !== 'admin@admin.com'){
-          return view('dar-aldawa.timer');
-      }
+    if ($request->input('email') !== 'admin@admin.com') {
+      return view('dar-aldawa.timer');
+    }
     $data = [
       'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
       'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
@@ -54,7 +54,7 @@ class HomeController extends Controller
       'china' => false
     ];
 
-    return view('dar-aldawa.zoom-webinar-mobile', compact('data'));
+    return view('dar-aldawa.zoom-webinar', compact('data'));
   }
 
   /* public function zoomMeeting()
