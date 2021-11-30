@@ -29,23 +29,27 @@ class HomeController extends Controller
     return view('dar-aldawa.join-speaker');
   }
 
+  public function msPharma()
+  {
+    return view('home');
+  }
+
 
   public function zoomMeeting(Request  $request)
   {
-
     $request->validate([
       'username' => 'required',
       'email' => 'required|email'
     ]);
-    if ($request->input('email') !== 'admin@admin.com') {
-      return view('dar-aldawa.timer');
-    }
+    // if ($request->input('email') !== 'admin@admin.com') {
+    //   return view('dar-aldawa.timer');
+    // }
     $data = [
       'apiKey' => 'CJZjEGmUS76Lz6pgYfhHPw',
       'apiSecret' => 'vDEzXFvNKdRmjvd2qwLL9Ek24xbXkjKlLifm',
-      'meetingNumber' => '98969037681',
+      'meetingNumber' => '98671429079',
       'userName' => $request->input('username'),
-      'passWord' => '447939',
+      'passWord' => '693031',
       'leaveUrl' => url('/'),
       'role' => 0,
       'userEmail' => $request->input('email'),
@@ -54,7 +58,7 @@ class HomeController extends Controller
       'china' => false
     ];
 
-    return view('dar-aldawa.zoom-webinar', compact('data'));
+    return view('zoom-meeting', compact('data'));
   }
 
   /* public function zoomMeeting()
